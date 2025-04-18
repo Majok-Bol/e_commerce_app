@@ -21,12 +21,19 @@ class ShoeTile extends StatelessWidget{
               child: Image.asset(shoe.imagePath)),
           //description
           Text(shoe.description,style: TextStyle(color: Colors.grey),),
-          Row(
+
+          Padding(padding: EdgeInsets.only(left: 13),child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-            Text(shoe.name),
-            Text(shoe.price),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [    Text(shoe.name,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                SizedBox(height: 5,),
+                Text('\$'+ shoe.price),],),
+
           ],),
+          ),
           //price
           //button to add to cart
           Container(

@@ -45,7 +45,7 @@ class ShopPageState extends State<ShopPage>{
       SizedBox(height: 20,),
       Expanded(child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount:20,
+        itemCount:6,
           itemBuilder: (context,index){
             Shoe shoe=Shoe(
                 name: 'Elegant sneaker',
@@ -54,7 +54,9 @@ class ShopPageState extends State<ShopPage>{
                 description: 'High quality shoe');
             return ShoeTile(shoe:shoe);
 
-      }))
+      })),
+      Padding(padding: EdgeInsets.only(top: 25,left: 25,right: 25),
+      child: Divider(color: Colors.white,),),
 
     ],);
   }
