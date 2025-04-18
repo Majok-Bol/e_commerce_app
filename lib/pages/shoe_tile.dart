@@ -20,7 +20,7 @@ class ShoeTile extends StatelessWidget{
             borderRadius: BorderRadius.circular(12),
               child: Image.asset(shoe.imagePath)),
           //description
-          Text(shoe.description,style: TextStyle(color: Colors.grey),),
+          Padding(padding:EdgeInsets.symmetric(horizontal:1),child:Text(shoe.description,style: TextStyle(color: Colors.grey),),),
 
           Padding(padding: EdgeInsets.only(left: 13),child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
