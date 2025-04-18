@@ -2,6 +2,8 @@
 import 'package:e_commerce_app/models/shoe.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_app/pages/shoe_tile.dart';
+import 'package:provider/provider.dart';
+import 'package:e_commerce_app/models/cart.dart';
 
 class ShopPage extends StatefulWidget{
   const ShopPage({super.key});
@@ -11,7 +13,8 @@ class ShopPage extends StatefulWidget{
 class ShopPageState extends State<ShopPage>{
   @override
   Widget build(BuildContext context){
-    return Column(children: [
+    //consume data in the cart
+    return Consumer<Cart>(builder: (context,value,child)=>Column(children: [
       //search bar
       Container(
         padding: EdgeInsets.all( 20),
@@ -45,19 +48,21 @@ class ShopPageState extends State<ShopPage>{
       SizedBox(height: 20,),
       Expanded(child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount:6,
+        itemCount:4,
           itemBuilder: (context,index){
-            Shoe shoe=Shoe(
-                name: 'Elegant sneaker',
-                price: '200',
-                imagePath:'lib/images/p3.jpg',
-                description: 'High quality shoe');
+            // Shoe shoe=Shoe(
+            //     name: 'Elegant sneaker',
+            //     price: '200',
+            //     imagePath:'lib/images/p3.jpg',
+            //     description: 'High quality shoe');
+            //get shoe list using its index
+            Shoe shoe=value.getShoeList()[index];
             return ShoeTile(shoe:shoe);
 
       })),
       Padding(padding: EdgeInsets.only(top: 25,left: 25,right: 25),
       child: Divider(color: Colors.white,),),
 
-    ],);
+    ],),);
   }
 }
