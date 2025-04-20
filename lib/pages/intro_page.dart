@@ -12,7 +12,7 @@ class IntroPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('E-Commerce app'),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue.shade200,
       ),
       body: Center(
         child: Padding(
