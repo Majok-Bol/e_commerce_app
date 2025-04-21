@@ -28,7 +28,7 @@ class Cart extends ChangeNotifier {
     Shoe(
       name: 'J12',
       price: '600',
-      imagePath: 'lib/images/p6.jpg',
+      imagePath: 'lib/images/p5.jpg',
       description: 'Shipped from Moscow',
     ),
   ];

@@ -10,7 +10,7 @@ class IntroPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: Text('E-Commerce app'),
+        title: Text('E-Commerce app', style: TextStyle(fontSize: 25)),
         centerTitle: true,
         backgroundColor: Colors.blue.shade200,
       ),

@@ -69,6 +69,7 @@ flutter:
      - lib/images/p9.jpg
      - lib/images/logo.jpg
      - lib/images/p13.jpeg
+     - lib/images/p5.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

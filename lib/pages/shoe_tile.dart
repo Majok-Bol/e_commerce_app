@@ -4,11 +4,12 @@ import 'package:e_commerce_app/models/shoe.dart';
 class ShoeTile extends StatelessWidget {
   //create shoe instance
   Shoe shoe;
-  ShoeTile({super.key, required this.shoe});
+  void Function()? onTap;
+  ShoeTile({super.key, required this.shoe, required this.onTap});
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 5),
+      padding: EdgeInsets.only(left: 6),
 
       decoration: BoxDecoration(
         color: Colors.grey.shade100,
@@ -41,7 +42,7 @@ class ShoeTile extends StatelessWidget {
                       shoe.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                       ),
                     ),
                     SizedBox(height: 1),
@@ -53,17 +54,21 @@ class ShoeTile extends StatelessWidget {
           ),
           //price
           //button to add to cart
-          Container(
-            padding: EdgeInsets.all(1),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10),
-                bottomRight: Radius.circular(12),
-              ),
-              color: Colors.black,
-            ),
+          GestureDetector(
+            onTap: onTap,
 
-            child: Icon(Icons.add, color: Colors.white),
+            child: Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(12),
+                ),
+                color: Colors.black,
+              ),
+
+              child: Icon(Icons.add, color: Colors.white),
+            ),
           ),
         ],
       ),
