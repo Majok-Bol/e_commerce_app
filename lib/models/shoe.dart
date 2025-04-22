@@ -1,4 +1,5 @@
-
+//class
+//blueprint for creating shoe
 class Shoe{
   final String name;
   final String price;
