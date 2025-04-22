@@ -20,7 +20,7 @@ class ShopPageState extends State<ShopPage> {
       context: context,
       builder:
           (context) => AlertDialog(
-            title: Text('Successfully added'),
+            title: Text('✅Successfully added'),
             content: Text('Check your cart'),
           ),
     );
@@ -77,7 +77,7 @@ class ShopPageState extends State<ShopPage> {
               SizedBox(height: 2),
               Expanded(
                 child: ListView.builder(
-                  scrollDirection: Axis.vertical,
+                  scrollDirection: Axis.horizontal,
                   itemCount: 4,
                   itemBuilder: (context, index) {
                     // Shoe shoe=Shoe(
